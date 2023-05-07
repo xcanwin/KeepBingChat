@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name              KeepBingChat
-// @description       实现火狐浏览器访问New Bing的ChatGPT
-// @version           1.1
+// @description       实现火狐浏览器访问New Bing的ChatGPT（谷歌浏览器对user script不友好，所以暂时只支持火狐浏览器）
+// @version           1.2
 // @author            xcanwin
 // @namespace         https://github.com/xcanwin/KeepBingChat/
 // @supportURL        https://github.com/xcanwin/KeepBingChat/
