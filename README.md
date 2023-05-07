@@ -1,6 +1,5 @@
 ## 简介
-- 突破插件限制，实现任何浏览器、移动系统、PC系统都能访问New Bing的ChatGPT。
-- Overcome plugin limitations and enable access to New Bing's ChatGPT on any browser, mobile operating system, and PC system.
+- 实现火狐浏览器访问New Bing的ChatGPT
 
 ## 用法
 1. 打开[https://www.bing.com/](https://www.bing.com/)
