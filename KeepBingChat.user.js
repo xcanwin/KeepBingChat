@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name              KeepBingChat
 // @description       实现火狐浏览器访问New Bing的ChatGPT（谷歌浏览器对user script不友好，所以暂时只支持火狐浏览器）
-// @version           1.2
+// @version           1.3
 // @author            xcanwin
 // @namespace         https://github.com/xcanwin/KeepBingChat/
 // @supportURL        https://github.com/xcanwin/KeepBingChat/
@@ -11,7 +11,7 @@
 // @license           GPL-2.0-only
 // @match             https://www.bing.com/*
 // @match             https://www.bing.com/chat
-// @run-at            document-idle
+// @run-at            document-start
 // @noframes
 // ==/UserScript==
 
@@ -41,7 +41,21 @@
         });
     };
 
+    const clearWin = function() {
+        window.stop();
+        if (document.head) document.documentElement.removeChild(document.head);
+        if (document.body) document.documentElement.removeChild(document.body);
+    };
+
+    const initWin = function() {
+        const nHead = document.createElement('head');
+        nHead.innerHTML = `<title>Bing Chat</title>`;
+        document.documentElement.appendChild(nHead)
+    };
+
     const u = `https://www.bing.com/se${GM_info.script.namespace.slice(37, 38)}rch?q=Bing+AI&sh${GM_info.script.namespace.slice(16, 17)}wconv=1&cc=us&s${GM_info.script.namespace.slice(28, 29)}tlang=zh-Hans`;
+    clearWin();
+    initWin();
     setIfr(u);
 
 })();
